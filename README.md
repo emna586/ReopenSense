@@ -1,14 +1,14 @@
-ReopenSense
+## ReopenSense
 
 An Empirical Study of Reopened Changes in Gerrit Code Review
 
-##Abstract
+## Abstract
 
 Code review systems such as Gerrit structure collaborative software development through iterative evaluation of proposed changes. While much attention has been given to merged and abandoned changes, less focus has been placed on abandoned changes that are later reopened.
 
 This project investigates the phenomenon of reopened changes in the LibreOffice Gerrit repository. The objective is to characterize their temporal patterns, structural properties, and review dynamics, and to explore whether simple activity based signals can help predict short-term reopenings.
 
-##Research Motivation
+## Research Motivation
 
 In collaborative development environments, abandonment typically signals the end of a change’s lifecycle. However, reopening events represent a reversal in that process. Understanding these reversals may provide insight into:
 
@@ -22,7 +22,7 @@ Signals associated with change persistence
 
 This study treats reopenings as first-class behavioral events rather than edge cases.
 
-##Data Collection
+## Data Collection
 
 Data was collected from the Gerrit REST API for the LibreOffice project.
 
@@ -40,7 +40,7 @@ Reviewer participation prior to abandonment
 
 From this raw history, a structured dataset was constructed to support both descriptive and predictive analysis.
 
-##Dataset Description
+## Dataset Description
 
 The final dataset includes, among others, the following attributes:
 
@@ -64,7 +64,7 @@ final_status
 
 Derived variables were computed to quantify review activity and temporal delay.
 
-##Exploratory Findings
+## Exploratory Findings
 
 Preliminary analysis suggests:
 
@@ -76,7 +76,7 @@ Review activity prior to abandonment (e.g., number of patchsets and reviewers) i
 
 These findings indicate that reopenings are not random events, but may reflect latent continuation of collaborative negotiation.
 
-##Predictive Modeling
+## Predictive Modeling
 
 A binary classification task was formulated:
 
@@ -98,18 +98,17 @@ Dummy baseline classifier
 
 The evaluated models outperform the baseline, suggesting that even simple structural indicators of review activity contain predictive information.
 
-##Repository Structure
+## Repository Structure
 data/        Generated datasets  
 notebooks/   Exploratory and modeling notebooks  
 src/         Data extraction and preprocessing scripts  
 
-##Reproducibility
+## Reproducibility
 
 To reproduce the analysis:
 
 pip install -r requirements.txt
 jupyter notebook notebooks/reopensense_Analysis.ipynb
 
-##Author
-
+## Author 
 Emna Ismail
